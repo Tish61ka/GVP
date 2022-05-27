@@ -22,15 +22,38 @@
 							</div>
 						</div>
 					</div>
-					<div class="bb-item" id="item1">
-						<div class="content">
-							<div class="scroller">
-                                <div class="opasity_block"></div>
-								<img src="img/page3.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item2">
+					<?
+						require './functions/connect.php';
+						$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 1");
+						while($row = $sql->fetch(PDO::FETCH_ASSOC)){
+							?>
+								<div class="bb-item" id="item1">
+									<div class="content">
+										<div class="scroller">		
+											<h1 id="h<?=$row['id']?>"><?=$row['h1']?></h1>
+											<p id="text<?=$row['id']?>"><?=$row['text']?></p>
+											<img id="img<?=$row['id']?>" src="<?='/'.$row['img']?>" alt="">
+											<?
+											$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 2");			
+											while($res = $sql->fetch(PDO::FETCH_ASSOC)){
+												?>
+													<h1 id="h<?=$res['id']?>"><?=$res['h1']?></h1>
+													<p id="text<?=$res['id']?>"><?=$res['text']?></p>
+													<img id="img<?=$res['id']?>" src="<?='/'.$res['img']?>" alt="">
+												<?
+											}
+											?>
+											<div class="opasity_block"></div>
+											<img src="img/page3.png" alt="">
+										</div>
+									</div>
+								</div>
+							<?
+						}
+					?>
+					
+					
+					<!-- <div class="bb-item" id="item2">
 						<div class="content">
 							<div class="scroller">
                             <div class="opasity_block"></div>
@@ -54,7 +77,7 @@
                         </div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="js/jquery.mousewheel.js"></script>
