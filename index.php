@@ -14,14 +14,14 @@
 <body>
 <div class="bb-custom-wrapper">
 				<div id="bb-bookblock" class="bb-bookblock">
-				<!-- <div class="bb-item" id="item1">
+				 <div class="bb-item" id="item1">
 						<div class="content">
 							<div class="scroller">
                                 <div class="opasity_block"></div>
 								<img class="background1" src="img/picture.png" alt="">
 							</div>
 						</div>
-					</div> -->
+					</div> 
 					<?
 						require './functions/connect.php';
 						$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 1");
@@ -46,8 +46,6 @@
 													<?
 												}
 												?>
-												<img class="tape-1" src="/img/tape.png" alt="">
-														<img class="tape-2" src="/img/tape.png" alt="">
 												</div>
 													<div class="right-setion">
 														<img class="img-2" src="/img/img2.png" alt="">
@@ -60,7 +58,48 @@
 							<?
 						}
 					?>
-					
+					<?
+						require './functions/connect.php';
+						$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 2");
+						while($row = $sql->fetch(PDO::FETCH_ASSOC)){
+							?>
+								<div class="bb-item" id="item1">
+									<div class="content">
+										<div class="scroller">	
+										<div class="opasity_block"></div>
+											<div class="background">
+												<div class="left-section-block">
+												<?
+												$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 2");			
+												while($res = $sql->fetch(PDO::FETCH_ASSOC)){
+													?>
+														<h1 id="h<?=$res['id']?>"><?=$res['h1']?></h1>
+														<p id="text<?=$res['id']?>"><?=$res['text']?></p>
+														<img id="img<?=$res['id']?>" src="<?='/'.$res['img']?>" alt="">
+													<?
+												}
+												?>
+												
+												</div>
+													<div class="right-setion-block">
+													<?
+												$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 3");			
+												while($res = $sql->fetch(PDO::FETCH_ASSOC)){
+													?>
+														<h1 id="h<?=$res['id']?>"><?=$res['h1']?></h1>
+														<p id="text<?=$res['id']?>"><?=$res['text']?></p>
+														<img id="img<?=$res['id']?>" src="<?='/'.$res['img']?>" alt="">
+													<?
+												}
+												?>
+													</div>
+											</div>	
+										</div>
+									</div>
+								</div>
+							<?
+						}
+					?>
 					
 					<!-- <div class="bb-item" id="item2">
 						<div class="content">
