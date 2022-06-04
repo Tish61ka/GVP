@@ -133,18 +133,6 @@ a:hover {
 	width: 100%;
 	height: 100vh;
 }
-.scroller img{
-	width: 100%;	
-	background-size: cover;
-	height: 100%;
-	object-fit: cover;
-}
-.opasity_block{
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	opacity: 0;
-}
 
 @media screen and (max-width: 800px){
 	.no-js .menu-panel {
