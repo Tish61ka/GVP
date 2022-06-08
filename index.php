@@ -12,12 +12,14 @@
     <title>Gravity Falls</title>
 </head>
 <body>
+	<div id="close-demo"></div>
 <div class="bb-custom-wrapper">
 				<div id="bb-bookblock" class="bb-bookblock">
 				 <div class="bb-item" id="item1">
 						<div class="content">
 							<div class="scroller">
                                 <div class="opasity_block"></div>
+								<div class="mainback"></div>
 								<img class="background1" src="img/picture.png" alt="">
 							</div>
 						</div>
@@ -100,39 +102,149 @@
 							<?
 						}
 					?>
-					
-					<!-- <div class="bb-item" id="item2">
-						<div class="content">
-							<div class="scroller">
-                            <div class="opasity_block"></div>
-                            <img src="img/page3.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="bb-item" id="item4">
-						<div class="content">
-							<div class="scroller">
-                            <div class="opasity_block"></div>
-                            <img src="img/page3.png" alt="">
-                        </div>
-						</div>
-					</div>
+					<?
+						require './functions/connect.php';
+						$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 4");
+						while($row = $sql->fetch(PDO::FETCH_ASSOC)){
+							?>
+								<div class="bb-item" id="item1">
+									<div class="content">
+										<div class="scroller">	
+										<div class="opasity_block"></div>
+											<div class="background2">
+												<div class="left-section-block">
+												<?
+												$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 4");			
+												while($res = $sql->fetch(PDO::FETCH_ASSOC)){
+													?>
+														<h1 id="h<?=$res['id']?>"><?=$res['h1']?></h1>
+														<p id="text<?=$res['id']?>"><?=$res['text']?></p>
+														<img id="img<?=$res['id']?>" src="<?='/'.$res['img']?>" alt="">
+													<?
+												}
+												?>
+												
+												</div>
+													<div class="right-setion-block">
+													<?
+												$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 5");			
+												while($res = $sql->fetch(PDO::FETCH_ASSOC)){
+													?>
+														<h1 id="h<?=$res['id']?>"><?=$res['h1']?></h1>
+														<p id="text<?=$res['id']?>"><?=$res['text']?></p>
+														<img id="img<?=$res['id']?>" src="<?='/'.$res['img']?>" alt="">
+													<?
+												}
+												?>
+													</div>
+											</div>	
+										</div>
+									</div>
+								</div>
+							<?
+						}
+					?>
+					<?
+						require './functions/connect.php';
+						$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 6");
+						while($row = $sql->fetch(PDO::FETCH_ASSOC)){
+							?>
+								<div class="bb-item" id="item1">
+									<div class="content">
+										<div class="scroller">	
+										<div class="opasity_block"></div>
+											<div class="background3">
+												<div class="left-section-block">
+												<?
+												$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 6");			
+												while($res = $sql->fetch(PDO::FETCH_ASSOC)){
+													?>
+														<h1 id="h<?=$res['id']?>"><?=$res['h1']?></h1>
+														<p id="text<?=$res['id']?>"><?=$res['text']?></p>
+														<img id="img<?=$res['id']?>" src="<?='/'.$res['img']?>" alt="">
+													<?
+												}
+												?>
+												
+												</div>
+													<div class="right-setion-block">
+													<?
+												$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 7");			
+												while($res = $sql->fetch(PDO::FETCH_ASSOC)){
+													?>
+														<h1 id="h<?=$res['id']?>"><?=$res['h1']?></h1>
+														<p id="text<?=$res['id']?>"><?=$res['text']?></p>
+														<img id="img<?=$res['id']?>" src="<?='/'.$res['img']?>" alt="">
+													<?
+												}
+												?>
+													</div>
+											</div>	
+										</div>
+									</div>
+								</div>
+							<?
+						}
+					?>
 					<div class="bb-item" id="item5">
 						<div class="content">
 							<div class="scroller">
                             <div class="opasity_block"></div>
-                            <img src="img/page3.png" alt="">
+							<div class="mainback"></div>
+                            <img class="background4" src="img/backpicture.png" alt="">
                         </div>
 						</div>
 					</div>
-				</div> -->
+				</div>
 			</div>
+			<button id="btn1" onclick="clicking()">
+			<p id="p-in-btn">Войти в демо-режим</p>
+			</button>
+			<section class="slider">
+				<div class="cd-slider">
+    			  <ul>
+    			    <li class="item current" style="background: #5AA0D8;">
+						<img id="first" src="/img/firstpageslider.png" alt="NO Ethernet">
+    			    </li>
+    			    <li class="item" style="background: #E0DBD8;">
+						<img id="second"src="/img/secondpageslider.png" alt="NO Ethernet">
+    			    </li>
+    			    <li class="item" style="background: #565656">
+						<img id="trith" src="/img/trithpageslider.png" alt="NO Ethernet">
+    			    </li>
+					<li class="item" style="background: #565656">
+						<img id="fourth" src="/img/fourthpageslider.png" alt="NO Ethernet">
+    			    </li>
+					<li class="item" style="background: #565656">
+						<img id="fifth" src="/img/fifthpageslider.png" alt="NO Ethernet">
+    			    </li>
+					<li class="item" style="background: #565656">
+						<img id="last"src="/img/lastpageslider.png" alt="NO Ethernet">
+    			    </li>
+    			  </ul>		
+    			<nav>
+    			    <a href="#" class="prev">
+    			      <svg viewBox="0 0 20 20">
+    			        <path fill="#FFFFFF" stroke-width="0" d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"></path>
+    			      </svg>
+    			    </a>
+    			    <a href="#" class="next">
+    			      <svg viewBox="0 0 20 20">
+    			        <path fill="#FFFFFF" stroke-width="0" d="M11.611,10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,0.012-1.105c0.309-0.304,0.803-0.293,1.105,0.012l5.306,5.433c0.304,0.31,0.296,0.805-0.012,1.105L7.83,15.928c-0.152,0.148-0.35,0.223-0.547,0.223c-0.203,0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,0.012-1.104L11.611,10.049z"></path>
+    			      </svg>
+    			    </a>
+    			  </nav>
+				</div>
+			</section>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script  src="./script.js"></script>
 		<script src="js/jquery.mousewheel.js"></script>
 		<script src="js/jquery.jscrollpane.min.js"></script>
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/jquery.bookblock.js"></script>
 		<script src="js/page.js"></script>
+		<script src="/js/script.js"></script>
+		<script src="/js/slider.js"></script>
 		<script>
 			$(function() {
 

@@ -18,7 +18,17 @@
 }
 
 html{
-    overflow-y: visible;
+    overflow-y: auto;
+}
+.mainback{
+    position: absolute;
+    background-image: url("../img/mainback.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 /* First section */
 .opasity_block{
@@ -32,11 +42,11 @@ html{
 }
 .background1{
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: 50%;
 }
 .background{
     position: relative;
@@ -47,7 +57,7 @@ html{
     z-index: 1;
     top: 0;
     left: 0;
-    background-image: url("/img/Фон.png");
+    background-image: url("/img/phon.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -141,4 +151,265 @@ h1{
     height: 42vw;
 }
 
-/* Close section section  */
+/* Close second section  */
+
+
+/* Trith section */
+.background2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url("/img/background1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#img4{
+    position: relative;
+    top: -20vw;
+    margin-left: 8.1%;
+    height: 35vw;
+}
+#text4{
+    position: relative;
+    margin-top: 3vw;
+    font-family: "text";
+    font-size: 1.4vw;
+    width: 90%;
+    margin-left: 9%;
+    line-height: 1.4;
+    z-index: 3;
+    white-space: pre;
+}
+#img5{
+    position: relative;
+    top: -17.5vw;
+    margin-left: 35%;
+    height: 32vw;
+}
+#text5{
+    position: relative;
+    margin-top: 3vw;
+    font-family: "text";
+    font-size: 1.4vw;
+    width: 86%;
+    margin-left: 5%;
+    line-height: 1.6;
+    float: left;
+    z-index: 4;
+}
+/* Close trith section */
+
+
+/* Fourth section */
+.background3{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url("/img/background2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#img6{
+    position: relative;
+    top: -12vw;
+    margin-left: 24.1%;
+    height: 32vw;
+}
+#text6{
+    position: relative;
+    margin-top: 3vw;
+    font-family: "text";
+    font-size: 1.4vw;
+    width: 90%;
+    margin-left: 9%;
+    line-height: 1.4;
+    z-index: 3;
+}
+#img7{
+    position: relative;
+    top: 1.5vw;
+    margin-left: 10%;
+    height: 30vw;
+}
+#text7{
+    position: relative;
+    margin-top: 3vw;
+    font-family: "text";
+    font-size: 1.4vw;
+    width: 86%;
+    margin-left: 5%;
+    line-height: 1.6;
+    float: left;
+    z-index: 4;
+}
+/* Close fourth section */
+
+
+/* Last section */
+.background4{
+    position: relative;
+    width: 55%;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+/* Close last section */
+#btn1{
+    position: absolute;
+    top: 2vw;
+    right: 0;
+    z-index: 10;
+    width: 13vw;
+    height: 4vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    transition: 0.8s;
+    color: white;
+}
+#btn1:hover{
+    box-shadow: 0vw 0vw 0.3vw 0.7vw rgba(0, 0, 0, 0.6);
+}
+.triangle{
+    transform: rotate(90deg);
+    width: 2vw;
+    height: 2vw;
+    transition: 400ms;
+}
+#close-demo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+/* slider section */
+.slider{
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 7;
+}
+.slider div{
+    display: inline-block;
+    z-index: 7;
+    width: 100vw;
+    top: 0;
+}
+.slider img{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 7;
+    transition: 1s;
+    top: 0;
+}
+.cd-slider {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	background: transparent;
+	overflow: hidden;
+}
+.item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: -webkit-transform 1s cubic-bezier(0.88, 0.01, 0.08, 0.99);
+	-moz-transition: -moz-transform 1s cubic-bezier(0.88, 0.01, 0.08, 0.99);
+	-o-transition: -o-transform 1s cubic-bezier(0.88, 0.01, 0.08, 0.99);
+	transition: transform 1s cubic-bezier(0.88, 0.01, 0.08, 0.99);
+}
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+}
+.next {
+	right: 5%;
+	left: auto;
+}
+.hide-nav {
+	visibility: hidden;
+}
+.card img, .card .img, .info > * {
+	opacity: 0;
+	-webkit-transform: translateY(20%);
+	-moz-transform: translateY(20%);
+	-ms-transform: translateY(20%);
+	-o-transform: translateY(20%);
+	transform: translateY(20%);
+	-webkit-transition: -webkit-transform .6s 1s, opacity .6s 1s;
+	-moz-transition: -moz-transform .6s 1s, opacity .6s 1s;
+	-o-transition: -o-transform .6s 1s, opacity .6s 1s;
+	transition: transform .6s 1s, opacity .6s 1s;
+}
+.prev_slide {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+.current {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+.current .card img, .current .card .img, .current .info > * {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+@media screen and (max-width: 900px) {
+	.card { max-width: 70%; }
+}
+@media screen and (max-width: 800px) {
+	.card { text-align: center; }
+	.info { padding-left: 0; }
+	.info p { display: none; }
+	.info a { float: none; }
+}
+@media screen and (max-width: 650px) {
+	.card { padding: 4%; }
+	.card img, .card .img { width: 60%; margin-bottom: 5%;}
+	.info { width: 100%; }
+	.prev { left: 3%; }
+	.next { right: 3%; }
+}
+@media screen and (max-height: 450px) and (orientation: landscape) {
+	.card img, .card .img { width: 40%; margin-bottom: 0; }
+	.info { width: 59%; padding-left: 5%;}
+}
+/* close slider section */
