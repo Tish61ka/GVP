@@ -54,5 +54,16 @@ function clicking(){
             document.querySelector(".slider").style.display = "block";
             i = false;
     }
-    console.log(i);
 }
+function click3(){
+    document.querySelector(".film").style.display = "none";
+}
+function hover(){
+    document.querySelector(".go-film").addEventListener("mouseover", function(){
+        document.querySelector(".go-film").style.left = 0;
+    })
+    document.querySelector(".go-film").addEventListener("mouseout", function(){
+        document.querySelector(".go-film").style.left = -11.5 + "vw";
+    })
+}
+hover();

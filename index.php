@@ -12,6 +12,14 @@
     <title>Gravity Falls</title>
 </head>
 <body>
+	<div class="film"> 
+		<img class="close-film" onclick="click3()" src="/img/grave.png" alt="">
+		<div>
+			<p>Чтобы перейти к просмотру сериала нажмите на "</p>
+			<img src="/img/question.png" alt="">
+			<p>" слева сверху</p>
+		</div>
+	</div>
 	<div id="close-demo"></div>
 <div class="bb-custom-wrapper">
 				<div id="bb-bookblock" class="bb-bookblock">
@@ -200,6 +208,7 @@
 			<button id="btn1" onclick="clicking()">
 			<p id="p-in-btn">Войти в демо-режим</p>
 			</button>
+			<a class="go-film" href="/output/videohost.html"><p>Перейти к просмотру</p><div></div></a>
 			<section class="slider">
 				<div class="cd-slider">
     			  <ul>
@@ -237,7 +246,7 @@
 				</div>
 			</section>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-			<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script  src="./script.js"></script>
+			<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 		<script src="js/jquery.mousewheel.js"></script>
 		<script src="js/jquery.jscrollpane.min.js"></script>
 		<script src="js/jquerypp.custom.js"></script>

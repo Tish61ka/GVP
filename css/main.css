@@ -30,6 +30,69 @@ html{
     left: 0;
     z-index: 1;
 }
+.film{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 11;
+}
+.film div{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 45vh;
+    margin-left: 5vw;
+    z-index: 11;
+}
+.film p{
+    color: white;
+    font-size: 2.5vw;
+    font-family: "text";
+    white-space: pre;
+    z-index: 11;
+}
+.close-film{
+    position: relative;
+    top: 1vw;
+    left: 95vw;
+    width: 3vw;
+    z-index: 11;
+}
+.close-film:hover{
+    cursor: pointer;
+}
+.go-film{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 14.5vw;
+    height: 3vw;
+    top: 2vw;
+    left: -11.5vw;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 800ms ease-in-out;
+}
+.go-film p{
+    color: white;
+    font-size: 0.9vw;
+    font-family: "text";
+    margin-left: 0.5vw;
+    margin-top: 1vw;
+}
+.go-film div{
+    background-image: url("/img/question.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2vw;
+    height: 2vw;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+}
 /* First section */
 .opasity_block{
 	position: absolute;
@@ -316,7 +379,6 @@ h1{
     height: 100vh;
     z-index: 7;
     transition: 1s;
-    top: 0;
 }
 .cd-slider {
 	position: relative;
