@@ -6,6 +6,10 @@
     font-family: 'text';
     src: url(/fonts/regular.otf);
 }
+@font-face {
+    font-family: 'Segoe';
+    src: url(/fonts/SegoePrintRegular.ttf);
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 *{
     margin: 0;
@@ -18,7 +22,86 @@
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
-
-html{
-    overflow-y: auto;
+:root{
+    --header-txt-color: #b3966d;
 }
+html{
+    scroll-behavior: smooth; 
+    overflow-y: auto;
+    background-color: #f2d9a0;
+}
+body{
+    width: 105vw;
+    background: url("/img/backvideo.png");
+    background-size: cover;
+}
+body::-webkit-scrollbar {
+    width: 1.1vw;               
+  }
+  body::-webkit-scrollbar-track {
+    background: transparent;       
+  }
+  body::-webkit-scrollbar-thumb {
+    background-image: url(/img/headerback1.png);   
+  }
+
+
+/* Header */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vw;
+    background-image: url("/img/headerback1.png");
+    background-size: cover;
+}
+.logo{
+    width: 11vw;
+    height: 7vw;
+    margin-left: 3.5vw;
+    margin-top: 1.5vw;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50vw;
+    margin-right: 3.5vw;
+    margin-top: 3vw;
+}
+header nav ul li a{
+    font-size: 2.2vw;
+    font-family: "Segoe";
+    color: var(--header-txt-color);
+}
+.enter{
+    display: flex;
+}
+.enter img{
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    height: 2.8vw;
+    width: 2.8vw;
+}
+/* Close header */
+
+
+/* First section */
+.scroller{
+    width: 100vw;
+    height: 30vw;
+    background-image: url("/img/mainbackheader.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Close first section */
+
+
+/* Second section */
+.videoplayer h1{
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 5vw;
+}
+/* Close second section */
