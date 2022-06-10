@@ -208,7 +208,7 @@
 			<button id="btn1" onclick="clicking()">
 			<p id="p-in-btn">Войти в демо-режим</p>
 			</button>
-			<a class="go-film" href="/output/videohost.html"><p>Перейти к просмотру</p><div></div></a>
+			<a class="go-film" href="/output/videohost.php"><p>Перейти к просмотру</p><div></div></a>
 			<section class="slider">
 				<div class="cd-slider">
     			  <ul>

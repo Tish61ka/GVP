@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 10 2022 г., 09:14
--- Версия сервера: 8.0.24
--- Версия PHP: 7.4.27
+-- Время создания: Июн 10 2022 г., 12:55
+-- Версия сервера: 8.0.29
+-- Версия PHP: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,6 +47,27 @@ INSERT INTO `info` (`id`, `h1`, `text`, `img`) VALUES
 (6, 'STANLY', 'Стэнли Филбрик «Стэн» Пайнс. ранее известный как Стэнфорд \r\nПайнс — двоюродный дедушка Диппера и Мэйбл Пайнс, \r\nпостоянный житель городка Гравити Фолз. После многих \r\nлет мошенничества и преступлений он поселился в \r\nотдаленном городке Гравити Фолз, штат Орегон, где \r\nруководит ловушкой для туристов, Хижиной Чудес. Несмотря на изначальный <br>\r\nскептицизм по отношению к <br>\r\nсверхъестественному, позже <br>\r\nвыясняется, что он сам тесно связан <br>\r\nс паранормальными явлениями <br>\r\nв Гравити Фолз.', 'img\\img8.png'),
 (7, 'STANFORD', 'Стэнфорд «Форд» Филбрик Пайнс — является автором \r\nдневников, старшим сыном Филбрика Пайнса и братом-\r\nблизнецом Стэна Пайнса. Точно так же, как и Стэн, он \r\nявляется двоюродным дедушкой Диппера и Мэйбл. Его знак \r\nна колесе Билла - шестипалая рука.', 'img\\img9.png');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `video`
+--
+
+CREATE TABLE `video` (
+  `id` int NOT NULL,
+  `name` varchar(200) DEFAULT NULL,
+  `video` varchar(300) DEFAULT NULL,
+  `text` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `video`
+--
+
+INSERT INTO `video` (`id`, `name`, `video`, `text`) VALUES
+(1, 'Сезон 1 серия 1', 'videos/video1.mp4', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam vitae iste aut quam. Natus eligendi, minus error, inventore veniam sed temporibus ullam.'),
+(2, 'Сезон 1 серия 2', 'videos/video1.mp4', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia laborum minus quam dicta, deserunt maxime deleniti repudiandae odio blanditiis aut impedit sed voluptatem quisquam rem! Perferendis vero vitae excepturi aspernatur?');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -58,6 +79,12 @@ ALTER TABLE `info`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `video`
+--
+ALTER TABLE `video`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -66,6 +93,12 @@ ALTER TABLE `info`
 --
 ALTER TABLE `info`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT для таблицы `video`
+--
+ALTER TABLE `video`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
