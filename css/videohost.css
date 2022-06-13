@@ -108,9 +108,9 @@ header nav ul li a{
 .videoplayer video{
     position: relative;
     width: 75vw;
-    height: 43vw;
+    height: 80vh;
     margin-left: 15vw;
-    margin-top: -49vw;
+    margin-top: -91vh;
     z-index: 3;
     top: none;
 }
@@ -118,7 +118,7 @@ header nav ul li a{
     position: relative;
     width: 75vw;
     margin-left: 10vw;
-    height: 40vw;
+    height: 82vh;
     margin-top: 10vw;
     background: rgba(0, 0, 0, 0.6);
 }
