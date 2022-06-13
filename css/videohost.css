@@ -103,5 +103,178 @@ header nav ul li a{
     font-size: 3vw;
     text-align: center;
     margin-top: 5vw;
+    margin-bottom: 4vw;
+}
+.videoplayer video{
+    position: relative;
+    width: 75vw;
+    height: 43vw;
+    margin-left: 15vw;
+    margin-top: -49vw;
+    z-index: 3;
+    top: none;
+}
+.shadow{
+    position: relative;
+    width: 75vw;
+    margin-left: 10vw;
+    height: 40vw;
+    margin-top: 10vw;
+    background: rgba(0, 0, 0, 0.6);
+}
+.videoplayer h2{
+    position: relative;
+    color: white;
+    width: 40vw;
+    margin-top: 0.5vw;
+    margin-left: 15vw;
+    font-size: 2vw;
+    z-index: 3;
+}
+.videoplayer p{
+    position: relative;
+    width: 70vw;
+    font-size: 1.4vw;
+    margin-left: 15vw;
+    margin-top: 2vw;
+}
+
+/* Выпдающее меню сезоны*/
+#content1 {
+    position: relative;
+    width: 10vw;
+    height: 3vw;
+    top: -3.5vw;
+    margin-left: 60vw;
+    background-color: #f2d9a0;
+    border-radius: 3px;
+    z-index: 4;
+  }
+  .select-wrapper {
+    position: relative;
+    width: 10vw;
+    height: 3vw;
+  }
+  .select-wrapper select {
+    width: 10vw;
+    height: 3vw;
+    font-size: 2vw;
+    padding-left: 0.5vw;
+    background: transparent;
+    appearance: none;            /* remove arrow        */
+    -webkit-appearance: none;    /* remove arrow Chrome */
+    -moz-appearance: none;       /* remove arrow FF     */
+  }
+  .select-wrapper select:hover{
+    cursor: pointer;
+  }
+  .select-wrapper select:focus{
+    border: none;
+  }
+  .select-wrapper select::before{
+    border: none;
+  }
+  .select-wrapper select::after{
+    border: none;
+  }
+  .select-wrapper select::-ms-expand{
+      display: none;             /* remove arrow IE     */
+  }
+  .select-wrapper select option{
+    font-size: 2vw;
+    background-color: #f2d9a0;
+  }
+  .select-wrapper select option:hover{
+    cursor: pointer;
+  }
+.first-img-video{
+    position: relative;
+    top: -2vw;
+    margin-left: 68vw;
+    width: 1vw;
+    height: 0.6vw;
+    transition: 500ms;
+    transform: translateY(50%) rotate(0deg);
+    z-index: 5;
+}
+/* Конец выпадающего меню сезонов */
+
+/* Выпдающее меню серии*/
+#content2 {
+    position: relative;
+    width: 11vw;
+    height: 3vw;
+    margin-top: -6.4vw;
+    margin-left: 72vw;
+    background-color: #f2d9a0;
+    border-radius: 3px;
+    z-index: 4;
+  }
+  .select-wrapper1 {
+    position: relative;
+    width: 11vw;
+    height: 3vw;
+  }
+  .select-wrapper1 select {
+    width: 11vw;
+    height: 3vw;
+    font-size: 2vw;
+    padding-left: 0.5vw;
+    background: transparent;
+    appearance: none;            /* remove arrow        */
+    -webkit-appearance: none;    /* remove arrow Chrome */
+    -moz-appearance: none;       /* remove arrow FF     */
+  }
+  .select-wrapper1 select:hover{
+    cursor: pointer;
+  }
+  .select-wrapper1 select:focus{
+    border: none;
+  }
+  .select-wrapper1 select::before{
+    border: none;
+  }
+  .select-wrapper1 select::after{
+    border: none;
+  }
+  .select-wrapper1 select::-ms-expand{
+      display: none;             /* remove arrow IE     */
+  }
+  .select-wrapper1 select option{
+    font-size: 1.3vw;
+    background-color: #f2d9a0;
+  }
+  .select-wrapper1 select option:hover{
+    cursor: pointer;
+  }
+  select::-webkit-scrollbar {
+    width: 1.1vw;               
+  }
+  select::-webkit-scrollbar-track {
+    background: #f2d9a0;       
+  }
+  select::-webkit-scrollbar-thumb {
+    background:rgba(0, 0, 0, 0.6);   
+  }
+.second-img-video{
+    position: relative;
+    top: -3.2vw;
+    margin-left: 81vw;
+    width: 1vw;
+    height: 0.6vw;
+    transition: 500ms;
+    transform: translateY(50%) rotate(0deg);
+    z-index: 5;
+}
+/* Конец выпадающего меню серий */
+
+#video2{
+    display: none;
+}
+#h2{
+    display: none;
+}
+#p2{
+    display: none;
 }
 /* Close second section */
