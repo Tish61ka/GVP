@@ -82,6 +82,43 @@
         }
     ?>
         </section>
+        <section class="comment">
+            <div class="commenting">
+                <form method="POST" action="">
+                    <textarea name="" id="" placeholder="Оставить отзыв..."></textarea>
+                </form>
+            </div>
+            <!-- <div class="all-comment">
+
+            </div> -->
+        </section>
+        <footer>
+            <div>
+                <img class="logo-footer" src="/img/logo.png" alt="">
+                <ul>
+                    <li>
+                        Для связи:
+                    </li>
+                    <li>
+                        89618126767
+                    </li>
+                    <li>
+                        yuriitish@mail.ru
+                    </li>
+                </ul>
+                <ul class="last-ul">
+                    <li>
+                        HappyTishkaCorp.
+                    </li>
+                    <li>
+                        Все права защищены      
+                    </li>
+                    <li>
+                        <a href="">Политика конфедациальности</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/menu.js"></script>
 </body>

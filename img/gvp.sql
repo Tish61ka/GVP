@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 10 2022 г., 12:55
--- Версия сервера: 8.0.29
--- Версия PHP: 7.1.33
+-- Время создания: Июн 14 2022 г., 22:18
+-- Версия сервера: 8.0.24
+-- Версия PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -57,7 +57,7 @@ CREATE TABLE `video` (
   `id` int NOT NULL,
   `name` varchar(200) DEFAULT NULL,
   `video` varchar(300) DEFAULT NULL,
-  `text` varchar(500) DEFAULT NULL
+  `text` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -65,8 +65,8 @@ CREATE TABLE `video` (
 --
 
 INSERT INTO `video` (`id`, `name`, `video`, `text`) VALUES
-(1, 'Сезон 1 серия 1', 'videos/video1.mp4', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam vitae iste aut quam. Natus eligendi, minus error, inventore veniam sed temporibus ullam.'),
-(2, 'Сезон 1 серия 2', 'videos/video1.mp4', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia laborum minus quam dicta, deserunt maxime deleniti repudiandae odio blanditiis aut impedit sed voluptatem quisquam rem! Perferendis vero vitae excepturi aspernatur?');
+(1, 'Гравити Фолз - Секреты Гравити Фолз', 'videos/video1.mp4', 'Родители Диппера и Мейбл отправляют своих детишек на лето в гости к их двоюродному дедушке, Стэну, в городок Гравити Фолз. Тот сразу назначает их уборщиками в своей Хижине Чудес, и лето обещает пройти очень скучно. Но Диппер в лесу находит Дневник №3, и узнаёт о разных аномалиях городка...'),
+(2, 'Гравити Фолз - Легенда о Живогрызе', 'videos/video1.mp4', 'Родители Диппера и Мейбл отправляют своих детишек на лето в гости к их двоюродному дедушке, Стэну, в городок Гравити Фолз. Тот сразу назначает их уборщиками в своей Хижине Чудес, и лето обещает пройти очень скучно. Но Диппер в лесу находит Дневник №3, и узнаёт о разных аномалиях городка. Когда Мейбл влюбляется в Нормана, странного парня, Диппер понимает, что тот внешне и по своему поведению схож с зомби,которые описываются в дневнике. Пока Диппер ищет доказательства и пытается параллельно защитить сестру, Мейбл проводит с новым другом все больше времени, и вдруг выясняется, что Норман - кучка гномов, ищащих себе королеву. Мейбл должна выйти замуж за всех их сразу, но брат все еще может помочь ей..');
 
 --
 -- Индексы сохранённых таблиц

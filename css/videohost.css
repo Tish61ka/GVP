@@ -108,7 +108,6 @@ header nav ul li a{
 .videoplayer video{
     position: relative;
     width: 75vw;
-    height: 80vh;
     margin-left: 15vw;
     margin-top: -91vh;
     z-index: 3;
@@ -137,6 +136,8 @@ header nav ul li a{
     font-size: 1.4vw;
     margin-left: 15vw;
     margin-top: 2vw;
+    padding: 1vw;
+    border: 0.1vw solid black;
 }
 
 /* Выпдающее меню сезоны*/
@@ -204,7 +205,7 @@ header nav ul li a{
     position: relative;
     width: 11vw;
     height: 3vw;
-    margin-top: -6.4vw;
+    margin-top: -6.5vw;
     margin-left: 72vw;
     background-color: #f2d9a0;
     border-radius: 3px;
@@ -258,7 +259,7 @@ header nav ul li a{
   }
 .second-img-video{
     position: relative;
-    top: -3.2vw;
+    top: -3.3vw;
     margin-left: 81vw;
     width: 1vw;
     height: 0.6vw;
@@ -278,3 +279,73 @@ header nav ul li a{
     display: none;
 }
 /* Close second section */
+
+
+/* Trith section */
+.comment{
+  margin-top: 7vh;
+  margin-left: 15vw;
+}
+.commenting{
+  width: 70vw;
+  height: 15vh;
+  background-image: url("/img/cooment-zone.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 5vh;
+}
+textarea{
+  background: transparent;
+  border: none;
+  width: 70vw;
+  height: 15vh;
+  padding: 1vw;
+  font-size: 1.5vw;
+}
+textarea::-webkit-input-placeholder{
+  color: black;
+}
+textarea:focus{
+  outline: none;
+}
+.all-comment{
+  width: 70vw;
+  height: 15vh;
+  background-image: url("/img/cooment-zone.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 5vh;
+}
+/* Close trith section */
+
+
+/* Footer */
+footer{
+  width: 100vw;
+  height: 20vh;
+  background-image: url("/img/headerback1.png");
+  background-size: cover;
+}
+footer div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer div img{
+  width: 11vw;
+  height: 7vw;
+  margin-left: 3.5vw;
+  margin-top: 2vw;
+}
+footer div ul{
+  margin-top: 1.5vw
+}
+footer div ul li, footer div ul li a{
+  color: white;
+  font-family: "Segoe";
+  font-size: 1.4vw;
+}
+.last-ul{
+  margin-right: 5vw;
+}
+/* Close footer */

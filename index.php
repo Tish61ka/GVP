@@ -8,10 +8,32 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
 	<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
 	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	<link rel="stylesheet" href="/css/peppermint.required.css">
 	<script src="js/modernizr.custom.79639.js"></script>
     <title>Gravity Falls</title>
 </head>
 <body>
+	<header>
+        <img class="logo" src="/img/logo.png" alt="">
+        <div class="wrapper">
+    		<nav>
+    		  <div class="burger-nav">
+    		  </div>
+    		  <div id="contain">
+    		    <div class="bar1"></div>
+    		    <div class="bar2"></div>
+    		    <div class="bar3"></div>
+    		  </div>
+    		  <ul id="nav" >
+    		    <li><a href="">Home</a></li>
+    		    <li><a href="">About</a></li>
+    		    <li><a href="">Photos</a></li>
+    		    <li><a href="">Videos</a></li>
+    		    <li><a href="">Contact</a></li>
+    		  </ul>
+    		</nav>
+  		</div>
+    </header>
 	<div class="film"> 
 		<img class="close-film" onclick="click3()" src="/img/grave.png" alt="">
 		<div>
@@ -46,16 +68,6 @@
 												<h1 class="h<?=$row['id']?>"><?=$row['h1']?></h1>
 												<p id="text<?=$row['id']?>"><?=$row['text']?></p>
 												<img id="img<?=$row['id']?>" src="<?='/'.$row['img']?>" alt="">
-												<?
-												$sql = $connect->query("SELECT * FROM `info` WHERE `id` = 2");			
-												while($res = $sql->fetch(PDO::FETCH_ASSOC)){
-													?>
-														<h1 id="h<?=$res['id']?>"><?=$res['h1']?></h1>
-														<p id="text<?=$res['id']?>"><?=$res['text']?></p>
-														<img id="img<?=$res['id']?>" src="<?='/'.$res['img']?>" alt="">
-													<?
-												}
-												?>
 												</div>
 													<div class="right-setion">
 														<img class="img-2" src="/img/img2.png" alt="">
@@ -245,6 +257,29 @@
     			  </nav>
 				</div>
 			</section>
+			<section class="mobile-slider">
+			<div class="peppermint peppermint-inactive" id="slider">
+				<div class="slide">
+					<img src="/img/firstpageslider.png" alt="">
+				</div>
+        		<div class="slide">
+					<img src="/img/secondpageslider.png" alt="">
+				</div>
+        		<div class="slide">
+					<img src="/img/trithpageslider.png" alt="">
+				</div>
+        		<div class="slide">
+					<img src="/img/fourthpageslider.png" alt="">
+				</div>
+        		<div class="slide">
+					<img src="/img/fifthpageslider.png" alt="">
+				</div>
+        		<div class="slide">
+					<img src="/img/lastpageslider.png" alt="">
+				</div>
+    		</div>
+			</section>
+			<img src="/img/tablet-version-photo.jpg" alt="" class="tablet-version-photo">
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 			<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 		<script src="js/jquery.mousewheel.js"></script>
@@ -254,6 +289,8 @@
 		<script src="js/page.js"></script>
 		<script src="/js/script.js"></script>
 		<script src="/js/slider.js"></script>
+		<script src="/js/peppermint.min.js"></script>
+		<script src="/js/mobile-slider.js"></script>
 		<script>
 			$(function() {
 
