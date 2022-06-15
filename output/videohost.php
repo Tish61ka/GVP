@@ -31,8 +31,19 @@ session_start();
                         }
                         else{
                             ?>
-                                <a href=""><?=$_SESSION['user']['email']?></a>
-                                <a href="../functions/logout.php">Выход</a>
+                            <a href="#" onclick="OpenProfileClick()">Профиль</a>
+                                    <ul id="header-ul">
+                                        <li class="first-li-header">
+                                            <img src="/img/grave.png" alt="No Ethernet" onclick="OpenProfileClick()">
+                                        </li>
+                                        <li class="last-li-header">
+                                            <h2>Имя:</h2>
+                                            <p><?=$_SESSION['user']['full_name']?></p>
+                                            <h2>E-mail:</h2>
+                                            <p><?=$_SESSION['user']['email']?></p>
+                                            <a href="../functions/logout.php"><button>Выход</button></a>
+                                        </li>
+                                    </ul>
                             <?
                         }
                     ?>
@@ -59,27 +70,27 @@ session_start();
                     <div class="select-wrapper1">
                       <select id="raz1" onclick="click2()" onchange="click3()">
                         <option id="option1" value="1">Серия 1</option>
-                        <option id="option2" value="2">Сезон 2</option>
+                        <option id="option2" value="2">Серия 2</option>
                         <option value="3">Серия 3</option>
-                        <option>Сезон 4</option>
+                        <option>Серия 4</option>
                         <option>Серия 5</option>
-                        <option>Сезон 6</option>
+                        <option>Серия 6</option>
                         <option>Серия 7</option>
-                        <option>Сезон 8</option>
+                        <option>Серия 8</option>
                         <option>Серия 9</option>
-                        <option>Сезон 10</option>
+                        <option>Серия 10</option>
                         <option>Серия 11</option>
-                        <option>Сезон 12</option>
+                        <option>Серия 12</option>
                         <option>Серия 13</option>
-                        <option>Сезон 14</option>
+                        <option>Серия 14</option>
                         <option>Серия 15</option>
-                        <option>Сезон 16</option>
+                        <option>Серия 16</option>
                         <option>Серия 17</option>
-                        <option>Сезон 18</option>
+                        <option>Серия 18</option>
                         <option>Серия 19</option>
-                        <option>Сезон 20</option>
-                        <option>Сезон 21</option>
-                        <option>Сезон 22</option>
+                        <option>Серия 20</option>
+                        <option>Серия 21</option>
+                        <option>Серия 22</option>
                       </select>
                     </div>
                 </div>
@@ -106,7 +117,7 @@ session_start();
                     ?>
                         <div class="commenting">
                             <form method="POST" action="../functions/order.php">
-                                <textarea name="text" id="" placeholder="Оставить отзыв..."></textarea>
+                                <textarea name="text" id="" placeholder="Оставить отзыв..." maxlength="50" ></textarea>
                                 <button type="submit">Отправить</button>
                             </form>
                         </div>

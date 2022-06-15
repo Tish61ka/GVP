@@ -1,3 +1,6 @@
+<?
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,21 +16,35 @@
     <title>Gravity Falls</title>
 </head>
 <body>
-	<header class = "header">
-		<img class="logo" src="/img/logo.png" alt="">
-    	<div class="container2 header__container">
-    	    <div class="menu-burger__header">
-    	        <span></span>
-    	    </div>
-    	    <nav class="header__nav">
-    	        <ul class="menu header__menu">
-    	            <li><a href="" class="menu__item">Главная</a></li>
-    	            <li><a href="" class="menu__item">Товары</a></li>
-    	            <li><a href="" class="menu__item">Акции</a></li>
-    	        </ul>
-    	    </nav>
-    	</div>
-	</header>
+<header>
+        <img class="logo" src="/img/logo.png" alt="">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/output/videohost.php">Мультсериал</a>
+                </li>
+                <li>
+                    <a>Каталог</a>
+                </li>
+                <li class="enter">
+                    <?
+                        if(!$_SESSION['user']){
+                            ?>
+                                <a href="/output/sign.php">Вход</a>
+                                <a href="/output/sign.php"><img src="/img/enter.png" alt=""></a>
+                            <?
+                        }
+                        else{
+                            ?>
+                                <a href="../functions/logout.php">Выход</a>
+                            <?
+                        }
+                    ?>
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
 	<div class="film"> 
 		<img class="close-film" onclick="click3()" src="/img/grave.png" alt="">
 		<div>
@@ -273,6 +290,34 @@
 				</div>
     		</div>
 			</section>
+			<img src="/img/mobile-version-photo.jpg" alt="" class="mobile-version-photo">
+			<footer>
+            <div>
+                <img class="logo-footer" src="/img/logo.png" alt="">
+                <ul>
+                    <li>
+                        Для связи:
+                    </li>
+                    <li>
+                        89618126767
+                    </li>
+                    <li>
+                        yuriitish@mail.ru
+                    </li>
+                </ul>
+                <ul class="last-ul">
+                    <li>
+                        HappyTishkaCorp.
+                    </li>
+                    <li>
+                        Все права защищены      
+                    </li>
+                    <li>
+                        <a href="">Политика конфедациальности</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
 			<img src="/img/tablet-version-photo.jpg" alt="" class="tablet-version-photo">
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 			<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>

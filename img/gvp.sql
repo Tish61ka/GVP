@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 15 2022 г., 20:08
+-- Время создания: Июн 16 2022 г., 01:28
 -- Версия сервера: 8.0.24
 -- Версия PHP: 7.4.27
 
@@ -65,7 +65,8 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `full_name`, `text`, `data`) VALUES
-(1, 'Куницын Даниил Олегович', '123', '15.06.2022');
+(1, 'Куницын Даниил Олегович', '123', '15.06.2022'),
+(2, 'Юрий Тишков', 'dsadas', '15.06.2022');
 
 -- --------------------------------------------------------
 
@@ -152,7 +153,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

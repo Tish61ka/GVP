@@ -1,8 +1,17 @@
 let i = false;
 let a = false;
+let b = false;
 let select = document.getElementById("raz1");
 let getValue = 0;
-
+function OpenProfileClick(){
+    if(b == false){
+        document.getElementById("header-ul").style.right = 0 + "%";
+        b = true;
+    }else{
+        document.getElementById("header-ul").style.right = -50 + "%";
+        b = false;
+    }
+}
 function click1(){
     if(i == false){
         document.querySelector(".first-img-video").style.transform = "rotate(" + 180 + "deg" + ")";
@@ -38,7 +47,6 @@ function click3(){
             document.getElementById("video2").style.display = "block";
             document.getElementById("h2").style.display = "block";  
             document.getElementById("p2").style.display = "block";
-            console.log(getValue);
           }else if(getValue == 1){
             document.getElementById("video1").style.display = "block"; 
             document.getElementById("h1").style.display = "block"; 

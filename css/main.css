@@ -25,56 +25,44 @@ html{
     overflow-y: auto;
 }
 /* Header */
-
+header{
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vw;
+    background-image: url("/img/headerback1.png");
+    background-size: cover;
+}
 .logo{
     width: 11vw;
     height: 7vw;
     margin-left: 3.5vw;
     margin-top: 1.5vw;
 }
-header {
-	position: relative;
-	width: 100vw;
-	top: 0;
-	left: 0;
-	z-index: 99;
-    height: 20vw;
-	background: url("/img/headerback.png");
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-}
-.container2{
-    width: 100%;
-    max-width: 100vw;
-    margin: 0 auto;
-    padding: 1vw;
-    height: 30vw;
-    position: relative;
-    top: 0;
-}
-.content-wrapper{
-	width: 100%;
-}
-.header__nav {
-    position: absolute;
-    display: block;
-}
-.header__menu {
+header nav ul{
     display: flex;
-	position: relative;
-    z-index: 8;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50vw;
+    margin-right: 3.5vw;
+    margin-top: 3vw;
 }
-.header__menu li {
-	list-style: none;
-	margin: 0px 0px 0px 2vw;
-	color: #000;
-	font-size: 1vw;
-	text-transform: uppercase;
-	text-decoration: none;
-    z-index: 99;
+header nav ul li a{
+    font-size: 2.2vw;
+    font-family: "Segoe";
+    color: #f2d9a0;
 }
-
+.enter{
+    display: flex;
+    margin-top: 1vw;
+}
+.enter img{
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    height: 2.8vw;
+    width: 2.8vw;
+}
 /* Close header */
 .mainback{
     position: absolute;
@@ -531,6 +519,42 @@ h1{
 .tablet-version-photo{
     display: none;
 }
+.mobile-version-photo{
+    display: none;
+    width: 100vw;
+    height: 132vw;
+}
+/* Footer */
+footer{
+    display: none;
+    width: 100vw;
+    height: 13vw;
+    background-image: url("/img/headerback1.png");
+    background-size: cover;
+  }
+  footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer div img{
+    width: 11vw;
+    height: 7vw;
+    margin-left: 3.5vw;
+    margin-top: 2vw;
+  }
+  footer div ul{
+    margin-top: 1.5vw
+  }
+  footer div ul li, footer div ul li a{
+    color: white;
+    font-family: "Segoe";
+    font-size: 1.4vw;
+  }
+  .last-ul{
+    margin-right: 5vw;
+  }
+  /* Close footer */
 /* Media section */
 @media screen and (max-width:1439px){
     #btn1{
@@ -564,7 +588,6 @@ h1{
     }
     .mobile-slider{
         display: block;
-        margin-top: 20vw;
     }
     #close-demo{
         display: none;
@@ -572,86 +595,24 @@ h1{
     .bb-custom-wrapper{
         display: none;
     }
-    .header__nav {
-        display: block;
-        position: absolute;
-        top: 10vw;
-        right: 0;
-        left: none;
-        background: black;
-        box-shadow: #ccc;
-        width: 100%;
-        box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.37);
-        transition: all 0.4s ease;
-        right:-100%;
-    }
-    .header__menu {
-        display: block;
-        height: 30vw;
-        z-index: 99;
-    }
-    .header__nav.open-menu{
-        right:0;
-    }
-    .header__menu li {
-        margin: 3vw 0px 6vw 3vw;
-        height: 5vw;
-        font-size: 2vw;
-        background: black;
-        }
-    .menu-burger__header {
-        position: relative;
-        width: 40px;
-        height: 35px;
-        display: block;
-        float: right;
-       }
-    .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
-        height: 3px;
-        width: 100%;
-        position: absolute;
-        background: #515758;
-        margin: 0 auto;
-    }
-    .menu-burger__header span{
-        top: 16px;
-    }
-    .menu-burger__header:after, .menu-burger__header:before{
-        content: '';
-    }
-    .menu-burger__header:after{
-        bottom: 5px;
-    }
-    .menu-burger__header:before{
-        top: 5px;
-    }
-    .menu-burger__header.open-menu span {
-        opacity:0; 
-        transition: 0.5s; 
-    }
-    .menu-burger__header.open-menu:before {
-        transform: rotate(38deg);
-        top: 16px;
-        transition: 0.4s;
-    }
-    .menu-burger__header.open-menu:after {
-        transform: rotate(-38deg);
-        bottom: 16px;
-        transition: 0.4s;
-    }
     header {
         display: flex;
-        height: 20vw;
-    }
-    .content-wrapper {
-        margin-top: 48px;
-    }
-    .fixed-page {
-        overflow: hidden;
-        z-index: 0;
+        z-index: 8;
     }
     .film{
         display: none;
+    }
+    #btn1{
+        display: none;
+    }
+    .go-film{
+        display: none;
+    }
+    .mobile-version-photo{
+        display: block;
+    }
+    footer{
+        display: block;
     }
 }
 /* Close media section */
