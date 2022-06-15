@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Dabhand';
+    src: url(/fonts/7fonts.ru_Dadhand.ttf);
+}
+@font-face {
+    font-family: 'text';
+    src: url(/fonts/regular.otf);
+}
+@font-face {
+    font-family: 'Segoe';
+    src: url(/fonts/SegoePrintRegular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: "text";
+	background: url("/img/backsign.png") no-repeat center/ cover;
+}
+.signup{
+    position: relative;
+    width: 35vw;
+    height: 23vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 20px 50px #000;
+    z-index: 1;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1vw;
+    width: 100%;
+}
+.signup form label{
+    font-size: 2vw;
+    font-family: "text";
+    color: white;
+    margin-left: 9.5vw;
+    margin-top: 1vw;
+}
+.signup form input{
+    background: #e8e3e3;
+    width: 60%;
+    height: 2vw;
+    margin-left: 5%;
+    padding-left: 0.5vw;
+}
+.signup form div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+}
+.signup form div a{
+    color: white;
+    font-family: "text";
+    font-size: 1.5vw;
+}
+.signup form div a:hover{
+    cursor: pointer;
+}
+button{
+    background: #e0dede;
+    border: none;
+    width: 40%;
+    height: 2vw;
+    font-size: 0.9vw;
+}
+button:hover{
+    cursor: pointer;
+}
+input::-webkit-input-placeholder{
+    color: black;
+    font-family: "text";
+    font-size: 0.9vw;
+}
+.signup img{
+    position: relative;
+    width: 12vw;
+    z-index: 2;
+    top: -18vw;
+    left: 25vw;
+}
+.login{
+    position: relative;
+    display: none;
+    width: 35vw;
+    height: 16vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 20px 50px #000;
+    z-index: 1;
+}
+.login form label{
+    font-size: 2.5vw;
+    font-family: "text";
+    color: white;
+    margin-top: 1vw;
+}
+.go-main{
+    margin-top: 1.5vw;
+}
+.login form input[type=email]{
+    margin-top: 1vw;
+}
+.login form input{
+    background: #e8e3e3;
+    width: 70%;
+    height: 2vw;
+    margin-left: 5%;
+    padding-left: 0.5vw;
+}
+.login form div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+}
+.login form div a{
+    color: white;
+    font-family: "text";
+    font-size: 1.5vw;
+}
+.login form div a:hover{
+    cursor: pointer;
+}
+.login img{
+    position: relative;
+    width: 15vw;
+    z-index: 2;
+    top: -15vw;
+    left: 13vw;
+}
+p{
+    color: white;
+    margin-left: 5%;
+}

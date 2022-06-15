@@ -19,8 +19,8 @@
                     <a>Каталог</a>
                 </li>
                 <li class="enter">
-                    <a>Вход</a>
-                    <a href=""><img src="/img/enter.png" alt=""></a>
+                    <a href="/output/sign.html">Вход</a>
+                    <a href="/output/sign.html"><img src="/img/enter.png" alt=""></a>
                 </li>
             </ul>
         </nav>

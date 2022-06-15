@@ -13,27 +13,21 @@
     <title>Gravity Falls</title>
 </head>
 <body>
-	<header>
-        <img class="logo" src="/img/logo.png" alt="">
-        <div class="wrapper">
-    		<nav>
-    		  <div class="burger-nav">
-    		  </div>
-    		  <div id="contain">
-    		    <div class="bar1"></div>
-    		    <div class="bar2"></div>
-    		    <div class="bar3"></div>
-    		  </div>
-    		  <ul id="nav" >
-    		    <li><a href="">Home</a></li>
-    		    <li><a href="">About</a></li>
-    		    <li><a href="">Photos</a></li>
-    		    <li><a href="">Videos</a></li>
-    		    <li><a href="">Contact</a></li>
-    		  </ul>
-    		</nav>
-  		</div>
-    </header>
+	<header class = "header">
+		<img class="logo" src="/img/logo.png" alt="">
+    	<div class="container2 header__container">
+    	    <div class="menu-burger__header">
+    	        <span></span>
+    	    </div>
+    	    <nav class="header__nav">
+    	        <ul class="menu header__menu">
+    	            <li><a href="" class="menu__item">Главная</a></li>
+    	            <li><a href="" class="menu__item">Товары</a></li>
+    	            <li><a href="" class="menu__item">Акции</a></li>
+    	        </ul>
+    	    </nav>
+    	</div>
+	</header>
 	<div class="film"> 
 		<img class="close-film" onclick="click3()" src="/img/grave.png" alt="">
 		<div>
@@ -43,7 +37,7 @@
 		</div>
 	</div>
 	<div id="close-demo"></div>
-<div class="bb-custom-wrapper">
+	<div class="bb-custom-wrapper">
 				<div id="bb-bookblock" class="bb-bookblock">
 				 <div class="bb-item" id="item1">
 						<div class="content">
@@ -218,7 +212,7 @@
 				</div>
 			</div>
 			<button id="btn1" onclick="clicking()">
-			<p id="p-in-btn">Войти в демо-режим</p>
+			<p id="p-in-btn">Загрузка демо-режим</p>
 			</button>
 			<a class="go-film" href="/output/videohost.php"><p>Перейти к просмотру</p><div></div></a>
 			<section class="slider">
@@ -291,6 +285,7 @@
 		<script src="/js/slider.js"></script>
 		<script src="/js/peppermint.min.js"></script>
 		<script src="/js/mobile-slider.js"></script>
+		<script src="/js/burger.js"></script>
 		<script>
 			$(function() {
 
