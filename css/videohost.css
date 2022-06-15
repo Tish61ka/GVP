@@ -287,8 +287,8 @@ header nav ul li a{
   margin-left: 15vw;
 }
 .commenting{
-  width: 70vw;
-  height: 15vh;
+  width: 75vw;
+  /* height: 15vh; */
   background-image: url("/img/cooment-zone.png");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -310,7 +310,7 @@ textarea:focus{
 }
 .all-comment{
   width: 70vw;
-  height: 15vh;
+  height: 15vw;
   background-image: url("/img/cooment-zone.png");
   background-size: 100%;
   background-repeat: no-repeat;

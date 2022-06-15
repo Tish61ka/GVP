@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 14 2022 г., 22:18
+-- Время создания: Июн 15 2022 г., 20:08
 -- Версия сервера: 8.0.24
 -- Версия PHP: 7.4.27
 
@@ -50,6 +50,48 @@ INSERT INTO `info` (`id`, `h1`, `text`, `img`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int NOT NULL,
+  `full_name` varchar(100) DEFAULT NULL,
+  `text` varchar(50) DEFAULT NULL,
+  `data` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `orders`
+--
+
+INSERT INTO `orders` (`id`, `full_name`, `text`, `data`) VALUES
+(1, 'Куницын Даниил Олегович', '123', '15.06.2022');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int NOT NULL,
+  `full_name` varchar(100) DEFAULT NULL,
+  `email` varchar(500) DEFAULT NULL,
+  `password` varchar(70) DEFAULT NULL,
+  `role` int NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `full_name`, `email`, `password`, `role`) VALUES
+(1, 'Куницын Даниил Олегович', 'danchik.kun@mail.ru', '202cb962ac59075b964b07152d234b70', 1),
+(3, 'Юрий Тишков', 'tishka@mail.ru', '76d80224611fc919a5d54f0ff9fba446', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `video`
 --
 
@@ -79,6 +121,18 @@ ALTER TABLE `info`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `video`
 --
 ALTER TABLE `video`
@@ -93,6 +147,18 @@ ALTER TABLE `video`
 --
 ALTER TABLE `info`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT для таблицы `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `video`

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -19,8 +22,21 @@
                     <a>Каталог</a>
                 </li>
                 <li class="enter">
-                    <a href="/output/sign.html">Вход</a>
-                    <a href="/output/sign.html"><img src="/img/enter.png" alt=""></a>
+                    <?
+                        if(!$_SESSION['user']){
+                            ?>
+                                <a href="/output/sign.php">Вход</a>
+                                <a href="/output/sign.php"><img src="/img/enter.png" alt=""></a>
+                            <?
+                        }
+                        else{
+                            ?>
+                                <a href=""><?=$_SESSION['user']['email']?></a>
+                                <a href="../functions/logout.php">Выход</a>
+                            <?
+                        }
+                    ?>
+                    
                 </li>
             </ul>
         </nav>
@@ -83,14 +99,38 @@
     ?>
         </section>
         <section class="comment">
-            <div class="commenting">
-                <form method="POST" action="">
-                    <textarea name="" id="" placeholder="Оставить отзыв..."></textarea>
-                </form>
-            </div>
-            <!-- <div class="all-comment">
+            <?
+                if(!$_SESSION['user']){
 
-            </div> -->
+                }else{
+                    ?>
+                        <div class="commenting">
+                            <form method="POST" action="../functions/order.php">
+                                <textarea name="text" id="" placeholder="Оставить отзыв..."></textarea>
+                                <button type="submit">Отправить</button>
+                            </form>
+                        </div>
+                    <?
+                }
+            ?>
+            
+            
+                <?
+                    require '../functions/connect.php';
+                    $sql = $connect->query("SELECT * FROM `orders`");
+                    while($row = $sql->fetch(PDO::FETCH_ASSOC)){
+                        ?>
+                            <div class="all-comment">
+                                <div>
+                                    <h2><?=$row['full_name']?></h2>
+                                    <h3><?=$row['data']?></h3>
+                                </div>
+                                <p><?=$row['text']?></p>
+                            </div>
+                        <?
+                    }
+                ?>
+            
         </section>
         <footer>
             <div>

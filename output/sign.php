@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,33 +13,46 @@
 </head>
 <body>
 	<div class="signup">
-		<form method="POST">
-			<label for="chk" aria-hidden="true">Регестрация</label>
-			<input type="text" name="txt" placeholder="Фамилия и Имя" required="">
+		<form method="POST" action="../functions/reg.php">
+			<label for="chk" aria-hidden="true">Регистрация</label>
+			<input type="text" name="full_name" placeholder="Фамилия и Имя" required="">
 			<input type="email" name="email" placeholder="Email" required="">
-			<input type="password" name="pswd" placeholder="Пароль" required="">
-            <input type="password" name="pswd" placeholder="Повторите пароль" required="">
+			<input type="password" name="password" placeholder="Пароль" required="">
+            <input type="password" name="password_confirm" placeholder="Повторите пароль" required="">
             <div>
-                <button>Регестрация</button>
+                <button type="submit">Регистрация</button>
                 <a href="#" onclick="click10()">Вход</a>
                 <a href="/index.php">На главную</a>
             </div>
+            <?php 
+                if ($_SESSION['message']){
+                    echo '<p>' . $_SESSION['message'] . '</p>';
+                }
+                unset($_SESSION['message']);
+            ?> 
+
             <!-- <p>Регестрация успешно пройдена!</p> -->
 		</form>
         <img src="/img/McGucket.png" alt="">
 	</div>
 	<div class="login">
-		<form method="POST">
+		<form method="POST" action="../functions/login.php">
             <div>
                 <label for="chk" aria-hidden="true">Вход</label>
                 <a class="go-main" href="/index.php">На главную</a>
             </div>
 			<input type="email" name="email" placeholder="Email" required="">
-			<input type="password" name="pswd" placeholder="Password" required="">
+			<input type="password" name="password" placeholder="Password" required="">
 			<div>
                 <button>Вход</button>
-                <a href="#" onclick="click10()">Регестрация</a>
+                <a href="#" onclick="click10()">Регистрация</a>
             </div>
+            <?php 
+                if ($_SESSION['message']){
+                    echo '<p>' . $_SESSION['message'] . '</p>';
+                }
+                unset($_SESSION['message']);
+            ?> 
 		</form>
         <img src="/img/Mabel.png" alt="">
 	</div>
