@@ -20,14 +20,23 @@ session_start();
         </ul>
         <ul class="content">
             <li>
-                <form action="" method="post">
-                    <input type="text" placeholder="Название">
-                    <input type="file" name="" id="">
-                    <input type="text" placeholder="Описание">
-                    <button type="submit">Загрузить</button>
+                <h1>Загрузить видео:</h1>
+                <form action="../functions/upload_video.php" enctype="multipart/form-data" method="post">
+                    <div>
+                        <input type="text" name="name" maxlength="50" placeholder="Название">
+                        <button type="submit">Загрузить</button>
+                        <img class="mcgucket" src="/img/McGucket.png" alt="">
+                    </div>
+                    <textarea name="text" id="" maxlength="300" placeholder="Описание"></textarea>
+                    <div>
+                        <label for="file" class="file">Загрузите видео или перетащите в поле</label>
+                        <input type="file" name="video" id="file"> 
+                        <img class="mabel" src="/img/Mabel.png" alt="">
+                    </div>
                 </form>
             </li>
             <li class="last-li-admin">
+                <h1>Отзывы:</h1>
             <?
                 require '../functions/connect.php';
                 $sql = $connect->query("SELECT * FROM `orders`");
@@ -38,7 +47,10 @@ session_start();
                                 <h2><?=$row['full_name']?></h2>
                                 <h3><?=$row['data']?></h3>
                             </div>
-                            <p><?=$row['text']?></p>
+                            <div>
+                                <p><?=$row['text']?></p>
+                                <a href="">Удалить</a>
+                            </div>  
                         </div>
                     <?
                 }
