@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Dabhand';
+    src: url(/fonts/7fonts.ru_Dadhand.ttf);
+}
+@font-face {
+    font-family: 'text';
+    src: url(/fonts/regular.otf);
+}
+@font-face {
+    font-family: 'Segoe';
+    src: url(/fonts/SegoePrintRegular.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    scroll-behavior: smooth; 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/* Section */
+section{
+    display: flex;
+    flex-direction: row;
+}
+/* left-panel */
+.left-panel{
+    position: relative;
+    background-color: #e8e3e3;
+    left: 0;
+    top: 0;
+    width: 5vw;
+    height: 100vh;
+    transition: 700ms;
+}
+.left-panel:hover{
+    width: 20vw;
+}
+.first-li-admin{
+    height: 10vw;
+    border-bottom: 0.1vw black solid;
+    margin-bottom: 2vw;
+}
+.first-li-admin img{
+    width: 3vw;
+    height: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+.first-p-admin{
+    margin-top: -1.5vw;
+}
+.first-li-admin p{
+    display: none;
+    margin-left: 1vw;
+    font-size: 1.5vw;
+    margin-bottom: 0.6vw;
+}
+.left-panel li:hover{
+    cursor: pointer;
+}
+.left-panel li img{
+    width: 3.5vw;
+    height: 3vw;
+    margin-left: 1vw;
+    margin-bottom: 2vw;
+}
+.li{
+    display: flex;
+    flex-direction: row;
+}
+.li p{
+    display: none;
+    margin-top: 0.6vw;
+    margin-left: 0.7vw;
+    font-size: 1.5vw;
+    color: black;
+}
+.left-panel li a{
+    display: flex;
+    flex-direction: row;
+}
+.left-panel li a p{
+    display: none;
+    margin-top: 0.6vw;
+    margin-left: 0.7vw;
+    font-size: 1.5vw;
+    color: black;
+}
+/*  Close left-panel */
+.last-li-admin{
+    display: none;
+}
+/* Close section */
