@@ -147,3 +147,42 @@ p{
     color: white;
     margin-left: 5%;
 }
+/* media section */
+@media  screen and (max-width:500px){
+    form{
+        gap: 1.2vw;
+    }
+    .signup{
+        position: relative;
+        width: 60vw;
+        height: 30vw;
+    }
+    .signup form input{
+        height: 2.5vw;
+    }
+    button{
+        height: 2.5vw;
+    }
+    .signup form div{
+        width: 90%;
+        margin-top: 1vw;
+    }
+    .signup img{
+        left: 45vw;
+        top: -24vw;
+    }
+    .login{
+        width: 60vw;
+        height: 22vw;
+    }
+    .login form div{
+        margin-top: 1vw;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .login img{
+        top: -18vw;
+        left: 31vw;
+    }
+}
+/* Close media section */
