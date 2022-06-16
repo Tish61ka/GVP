@@ -95,7 +95,111 @@ section{
     color: black;
 }
 /*  Close left-panel */
+h1{
+    margin-top: 2vw;
+    margin-left: 2vw;
+    font-size: 1.6vw;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    height: 20vw;
+    margin-top: 2vw;
+    border: 0.1vw solid black;
+    margin-left: 2vw;
+    padding-top: 1vw;
+    padding-left: 1vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 20px 50px #000;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+input[type=text]{
+    width: 20vw;
+    height: 3vw;
+    padding: 0.5vw;
+    border: 0.1vw solid black;
+    font-size: 1.3vw;
+}
+input[type=file]{
+    position: relative;
+    z-index: 2;
+    width: 20vw;
+    height: 15vw;
+    top: -10vw;
+}
+input[type=file]:hover{
+    cursor: pointer;
+}
+label{
+    position: relative;
+    width: 20vw;
+    height: 15vw;
+    z-index: 1;
+    border: 0.1vw solid black;
+    padding: 1vw;
+}
+button{
+    width: 20vw;
+    height: 3vw;
+    padding: 0.5vw;
+    border: 0.1vw solid black;
+    background: transparent;
+    margin-top: 2vw;
+    transition: 500ms;
+}
+button:hover{
+    cursor: pointer;
+    background-color: white;
+}
+textarea{
+    width: 20vw;
+    height: 18vw;
+    padding: 1vw;
+}
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder{
+    color: black;
+}
 .last-li-admin{
     display: none;
+}
+.all-comment{
+    width: 70vw;
+    margin-left: 1vw;
+    margin-top: 2vw;
+    border: 0.1vw solid black;
+}
+.all-comment div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw;
+}
+.all-comment div a{
+    padding: 0.5vw 1vw;
+    border: 0.1vw solid rgb(231, 28, 28);
+    color: black;
+    transition: 500ms;
+}
+.all-comment div a:hover{
+    background-color: rgb(231, 28, 28);
+    cursor: pointer;
+    color: white;
+}
+.mcgucket{
+    width: 8vw;
+    margin-left: 10vw;
+}
+.mabel{
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    margin-left: 5vw;
+    z-index: 4;
 }
 /* Close section */
